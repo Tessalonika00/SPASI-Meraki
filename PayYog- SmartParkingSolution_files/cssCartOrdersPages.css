@@ -1,0 +1,406 @@
+/* ########################################## cssCartOrdersPages.php ########################################## */
+
+html.cartOrdersPages body {
+	background-color: transparent;
+	color:white;
+}
+html.cartOrdersPages body .table-bordered {
+	background-color: #000;
+	border: 1px solid rgb(66, 66, 66);
+}
+html.cartOrdersPages body .table-bordered>thead>tr>th,html.cartOrdersPages body .table-bordered>tbody>tr>td {
+	border: 1px solid rgb(66, 66, 66);
+}
+
+
+html.cartOrdersPagesSSL .intl-tel-input {
+	width:100%;
+}
+
+html[dir="rtl"]	html.cartOrdersPagesSSL .intl-tel-input .selected-flag {
+	padding: 0 8px 0 0px;
+}
+html[dir="rtl"]	html.cartOrdersPagesSSL .intl-tel-input .selected-flag .iti-arrow {
+	left: 6px;
+	right: auto;
+	border-right: 3px solid transparent;
+	border-left: 3px solid transparent;
+}
+html[dir="rtl"]	html.cartOrdersPagesSSL .intl-tel-input .country-list {
+	text-align: right;
+	margin: 0 -1px 0 0;
+}
+html[dir="rtl"]	html.cartOrdersPagesSSL .intl-tel-input .country-list .flag-box, .intl-tel-input .country-list .country-name {
+	margin-left: 6px;
+	margin-right: 0;
+}
+html[dir="rtl"]	html.cartOrdersPagesSSL .intl-tel-input .country-list {
+	left:0;
+	right:auto;
+}
+
+.intl-tel-input.allow-dropdown .selected-flag {
+	margin-top: 8px;
+}
+
+
+html.cartOrdersPagesSSL .error.help-block {
+    color: red;
+    font-size: 0.8rem;
+    font-weight: normal;
+}
+html.cartOrdersPagesSSL .has-error .form-control {
+	border-color: red;
+}
+
+
+html.cartOrdersPagesSSL .cart-container {
+	height: 650px;
+	overflow-x: hidden;
+	overflow-y: auto;
+	/* hide user cart on mobile devices */
+	display: none;
+	padding: 20px;
+    padding-top:35px;
+    border-left: 1px solid #e2e2e2;
+}
+html.cartOrdersPagesSSL[dir="rtl"] .cart-container {
+	border-left: none;
+	border-right: 1px solid #e2e2e2;
+}
+/* show the user cart on none mobile devices */
+@media ( min-width:600px ) {
+	html.cartOrdersPagesSSL .cart-container {
+		display: block;
+	}
+}
+html.cartOrdersPagesSSL .order-spacing-box {
+	padding: 35px;
+    padding-bottom:20px;
+}
+/* we show the cart on iFrame so `col-xs` is more equal to `col-sm`, we fix it manually */
+html.cartOrdersPagesSSL #order_form_detail .col-xs-6 {
+	width: 100%;
+}
+@media ( min-width:600px ) {
+	html.cartOrdersPagesSSL #order_form_detail .col-xs-6 {
+		width: 50%;
+	}
+}
+html.cartOrdersPagesSSL .cart-products-container {
+	max-height: 330px;
+	margin-bottom: 20px;
+	overflow-y: auto;
+}
+html.cartOrdersPagesSSL .cart-product-container {
+	margin-bottom: 10px;
+}
+html.cartOrdersPagesSSL .cart-product-image,
+html.cartOrdersPagesSSL .cart-product-info {
+	width: 100%;
+	display: block;
+}
+html.cartOrdersPagesSSL .cart-product-image {
+	width: 100px;
+	margin-bottom: 10px;
+}
+html.cartOrdersPagesSSL .cart-product-image img {
+    width: auto;
+    max-width: 100%;
+    max-height: 100px;
+    height: auto;x;
+}
+html.cartOrdersPagesSSL .cart-product-options {
+	font-style: italic;
+	word-break: break-word;
+	font-size: 0.8rem;
+}
+@media (min-width: 480px) {
+	html.cartOrdersPagesSSL .cart-product-image {
+		margin: 5px 0 0;
+		display: inline-block;
+		vertical-align: top;
+	}
+	html.cartOrdersPagesSSL .cart-product-info {
+		width: calc(100% - 105px);  /* related to .cart-product-image */
+		padding: 0 10px;
+		display: inline-block;
+		vertical-align: top;
+	}
+}
+html.cartOrdersPagesSSL .cart-summerize-container {
+    margin-bottom: 10px;
+}
+html.cartOrdersPagesSSL .cart-coupon-container {
+	margin-bottom: 20px;
+}
+html.cartOrdersPagesSSL #showCouponBtn {
+	padding: 0px;
+}
+
+html.cartOrdersPagesSSL .shipping-options .radio {
+	margin-top: 0;
+	margin-bottom: 30px;
+}
+
+html.cartOrdersPagesSSL .mainOrderBox .box {
+	border:1px solid #e2e2e2;
+	border-radius: 4px;
+	min-height: 400px;
+    margin-top:10px;
+	margin-bottom: 50px;
+	background: #fff;
+	position: relative;
+}
+@media(max-width:767px) {
+	html.cartOrdersPagesSSL .mainOrderBox .box {
+		border-radius: 0;
+	}
+}
+
+html.cartOrdersPagesSSL .sslHeader > div {
+	display: flex;
+	align-items: center;
+	align-content: center;
+	height: 70px;
+}
+html.cartOrdersPagesSSL .sslHeader .name {
+	justify-content: flex-start;
+}
+html.cartOrdersPagesSSL .sslHeader .name h2 {
+	margin: 0;
+}
+html.cartOrdersPagesSSL .sslHeader .name img {
+	max-height: 100px;
+}
+html.cartOrdersPagesSSL .sslHeader .sslLogo {
+	justify-content: flex-end;
+	font-size:35px;
+	color: #000; /* IE11 Support */
+	color: var(--global_main_color);
+}
+
+
+html.cartOrdersPagesSSL .payWizardTabs {
+}
+html.cartOrdersPagesSSL .payWizardTabs .num {
+    position: absolute;
+    left: 10px;
+    top: 7px;
+    border-radius: 3px;
+    background-color: #000; /* IE11 Support */
+    background-color: var(--global_main_color);
+    padding: 5px 13px;
+    color: white;
+    font-size: 18px;
+    opacity: 0.5;
+}
+html.cartOrdersPagesSSL .payWizardTabs .active .num {
+    opacity: 1;
+}
+html.cartOrdersPagesSSL .payWizardTabs > div {
+    background-color: #efefef;
+    color: black;
+    font-weight: normal;
+    border-radius: 0;
+    text-align: center;
+    padding: 15px;
+    border: 1px solid #e2e2e2;
+}
+html.cartOrdersPagesSSL .payWizardTabs > div.active {
+	background-color: #fff;
+	color:black;
+	font-weight: bold;
+    border-bottom: 0;
+    border-radius: 0;
+}
+
+html.cartOrdersPagesSSL .payWizardTabs .info {
+	border-top-width: 0;
+	border-left-width: 0;
+}
+html.cartOrdersPagesSSL[dir="rtl"] .payWizardTabs .info {
+	border-left-width: 1px;
+	border-right-width: 0;
+}
+html.cartOrdersPagesSSL .payWizardTabs .ship {
+	border-top-width: 0;
+	border-left-width: 0;
+	border-right-width:0;
+}
+html.cartOrdersPagesSSL .payWizardTabs .pay {
+	border-top-width: 0;
+	border-right-width: 0;
+}
+html.cartOrdersPagesSSL[dir="rtl"] .payWizardTabs .pay {
+	border-right-width: 1px;
+	border-left-width: 0;
+}
+
+html.cartOrdersPagesSSL .paymentIcon {
+	text-align: center;
+	font-size: 25px;
+}
+
+html.cartOrdersPagesSSL .charged-successfully h1 {
+	color: #000; /* IE11 Support */
+	color: var(--global_main_color);
+	margin-bottom: 20px;
+}
+html.cartOrdersPagesSSL .charged-successfully .offline-payment {
+	margin-bottom: 20px;
+}
+html.cartOrdersPagesSSL #coupon > span:before {
+  content: '-';
+}
+html.cartOrdersPagesSSL #orderLoadingMessage {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 100;
+	background-color: #000;
+	opacity: 0.6;
+	display: flex;
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+}
+html.cartOrdersPagesSSL #orderContainer .charged-successfully .offline-payment-method {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+html.cartOrdersPagesSSL #orderContainer .payment-method-list {
+    cursor: pointer;
+}
+html.cartOrdersPagesSSL #orderContainer .payment-method-list:not(.border-primary) {
+    border: 1px solid #ddd;
+    border-bottom: 0px solid #ddd;
+}
+html.cartOrdersPagesSSL #orderContainer .payment-method-list.border-primary {
+    border-style: solid;
+    border-width: 1px;
+    background-color: #efefef;
+}
+html.cartOrdersPagesSSL #orderContainer .payment-method-list .payment-method-radio {
+    display: block;
+	padding-bottom: 5px;
+}
+html.cartOrdersPagesSSL #orderContainer .payment-method-list .payment-method-description {
+    font-size: 14px;
+}
+html.cartOrdersPagesSSL #orderContainer .place-order-btn {
+    width: 100%;
+    margin: 10px auto;
+}
+html.cartOrdersPagesSSL #orderContainer .ecommerce-thx-msg ul {
+    list-style-position: inside;
+    line-height: 1.5;
+}
+html.cartOrdersPagesSSL #orderContainer .ecommerce-thx-msg ol {
+	list-style-position: inside;
+}
+html.cartOrdersPagesSSL #orderContainer .ecommerce-thx-msg,
+html.cartOrdersPagesSSL #orderContainer .charged-successfully .return-hp-after-paid-btn {
+	margin-bottom: 20px;
+}
+
+html.cartOrdersPagesSSL #orderContainer .form-group {
+	margin-bottom: 20px;
+}
+html.cartOrdersPagesSSL #orderContainer .form-group .f-b-date-timePicker .s123-calendar-handler-input,
+html.cartOrdersPagesSSL #orderContainer .form-group input[type="text"],
+html.cartOrdersPagesSSL #orderContainer .form-group input[type="email"],
+html.cartOrdersPagesSSL #orderContainer .form-group input[type="number"],
+html.cartOrdersPagesSSL #orderContainer .form-group input[type="date"],
+html.cartOrdersPagesSSL #orderContainer .form-group select,
+html.cartOrdersPagesSSL #orderContainer .form-group textarea {
+	padding: 1.375rem .75rem .375rem .75rem;
+	font-size: 0.8rem;
+}
+html.cartOrdersPagesSSL #orderContainer .form-group .f-b-date-timePicker .s123-calendar-handler-input {
+    z-index: 1;
+    min-height: 50px;	
+}
+html.cartOrdersPagesSSL #orderContainer .form-group input[type="date"] {
+	line-height: 1;
+}
+html.cartOrdersPagesSSL #orderContainer .form-group select {
+	min-height: 3rem;
+    height: 3rem;
+    padding: 1.375rem .75rem .375rem .75rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+html.cartOrdersPagesSSL #orderContainer label:not(.error) {
+	font-weight: normal;
+	font-size: 1rem;
+	z-index: 1;
+}
+html.cartOrdersPagesSSL #orderContainer .softLabel label:not(.error) {
+    position: absolute;
+    top: 13px;
+    left: 21px;
+    opacity: 0.6;
+    background-color: transparent;
+    padding: .2rem .45rem;
+    font-size: 15px;
+    transition: transform .2s ease-out, opacity .2s ease-out, font-size .2s ease-out, top .2s ease-out;
+}
+html[dir=rtl].cartOrdersPagesSSL #orderContainer .softLabel label:not(.error) {
+    right: 21px;
+    left: auto;
+}
+html.cartOrdersPagesSSL #orderContainer .softLabel label:not(.error):hover {
+    cursor: text;
+}
+html.cartOrdersPagesSSL #orderContainer .softLabel label:not(.error).active {
+    top: 0;
+    font-size: 12px;
+    opacity: 1;
+}
+/* bug-fix >> webkit browsers auto complete - when users select something from the browser Autocomplete its overwrite the labels, to fix that issue we added that fix, source:  https://css-tricks.com/snippets/css/change-autocomplete-styles-webkit-browsers/ */
+#orderContainer input:-webkit-autofill + label ,
+#orderContainer input:-webkit-autofill:hover + label , 
+#orderContainer input:-webkit-autofill:focus + label,
+#orderContainer textarea:-webkit-autofill + label,
+#orderContainer textarea:-webkit-autofill:hover + label,
+#orderContainer textarea:-webkit-autofill:focus + label,
+#orderContainer select:-webkit-autofill + label,
+#orderContainer select:-webkit-autofill:hover + label,
+#orderContainer select:-webkit-autofill:focus + label {
+    top: 0 !important;
+    font-size: 12px !important;
+    opacity: 1 !important;
+}
+
+/* Fix IntlTel design */
+html.cartOrdersPagesSSL #orderContainer .intl-tel-input.allow-dropdown input, .intl-tel-input.allow-dropdown input[type=text], .intl-tel-input.allow-dropdown input[type=tel] {
+    padding-right: 6px !important;
+    padding-left: 52px !important;
+}
+/* Client addresses design */
+#orderContainer .client-addresses label {
+	padding-top: 10px;
+	cursor: pointer;
+}
+#orderContainer .client-addresses .client-display-addresses-btn {
+	float: right;
+}
+html[dir=rtl] #orderContainer .client-addresses .client-display-addresses-btn {
+	float: left;
+}
+#orderContainer .client-addresses .client-addresses-radios {
+	margin-right: 20px;
+}
+html[dir=rtl] #orderContainer .client-addresses .client-addresses-radios {
+	margin-right: 0px;
+	margin-left: 20px;
+}
+.mainOrderBox .order-spacing-box .order-form-box {
+	display: none;
+}
